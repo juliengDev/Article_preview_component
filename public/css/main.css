@@ -77,8 +77,7 @@ FONT SIZE SYSTEM (px)
 
   */
 body {
-  background-color: #fafafa;
-  font-family: Arial, sans-serif;
+  font-family: "Verdana", sans-serif;
   font-weight: 400;
   line-height: 1.4;
 }
@@ -132,9 +131,4 @@ body {
   color: var(--color-dark-raspberry) !important;
 }
 
-.container {
-  gap: 16px;
-  margin: 32px auto;
-}
-
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=main.css.map */
