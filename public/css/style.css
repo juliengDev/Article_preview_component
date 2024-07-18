@@ -77,8 +77,8 @@ FONT SIZE SYSTEM (px)
 
   */
 body {
+  font-family: "Verdana", sans-serif;
   background-color: #fafafa;
-  font-family: Arial, sans-serif;
   font-weight: 400;
   line-height: 1.4;
 }
@@ -130,11 +130,6 @@ body {
 .attribution__credit {
   font-weight: 800;
   color: var(--color-dark-raspberry) !important;
-}
-
-.container {
-  gap: 16px;
-  margin: 32px auto;
 }
 
 /*# sourceMappingURL=style.css.map */
