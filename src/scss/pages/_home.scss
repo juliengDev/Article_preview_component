@@ -1,8 +1,10 @@
 .article {
   display: grid;
-  grid-template-columns: minmax(0, 28.5rem) minmax(0, 44.5rem);
+  grid-template-columns: minmax(0, 28.5rem) minmax(0, 44.5rem) 0;
   max-width: 73rem;
   width: 100%;
+  box-shadow: 0px 40px 40px rgba(201, 213, 225, 0.5);
+  border-radius: 10px;
 
   &__img {
     width: 100%;
@@ -11,6 +13,38 @@
   }
 
   &__content {
-    padding: clamp(2rem, 5vw, 3.2rem) clamp(2.5rem, 5vw, 4rem);
+    padding: clamp(2rem, 5vw, 3.2rem) clamp(2rem, 5vw, 2.5rem)
+      clamp(2.5rem, 5vw, 4rem);
+    &__container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__heading {
+      max-width: 29ch;
+      margin-bottom: 1.2rem;
+    }
+    &__txt {
+      margin-bottom: 2rem;
+    }
+    &__card {
+      display: flex;
+      gap: 1.6rem;
+
+      &__avatar {
+        border-radius: 50%;
+      }
+      &__profil {
+        font-size: 1.3rem;
+        line-height: 20px;
+        letter-spacing: 0.12px;
+        &__name {
+          color: var(--color-Fiord);
+        }
+        &__date {
+          color: var(--color-Cadet-Blue);
+        }
+      }
+    }
   }
 }

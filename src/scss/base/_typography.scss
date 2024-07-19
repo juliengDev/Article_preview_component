@@ -21,3 +21,19 @@ body {
   font-weight: 400;
   line-height: 1.4;
 }
+
+.ft-heading {
+  font-size: clamp(2rem, 1.5vw, 2.5rem);
+  line-height: 28px;
+  letter-spacing: 0.25px;
+  font-weight: 700;
+  color: var(--color-Fiord);
+}
+
+.ft-intro {
+  font-size: clamp(1.3rem, 1.5vw, 1.8rem);
+  line-height: 20px;
+  letter-spacing: 0.12px;
+  font-weight: 500;
+  color: var(--color-Lynch);
+}
