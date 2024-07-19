@@ -9,5 +9,9 @@
     border-radius: 50%;
     border: none;
     z-index: 2;
+    transition: all 0.3s ease-in-out;
+    &-active {
+      background-color: var(--color-Fiord);
+    }
   }
 }
