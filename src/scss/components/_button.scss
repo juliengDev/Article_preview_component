@@ -1,0 +1,13 @@
+.btn {
+  &__share {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 50%;
+    border: none;
+    z-index: 2;
+  }
+}

@@ -20,6 +20,7 @@
 
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -33,4 +34,12 @@
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+.mg-top {
+  margin-top: 24rem;
+}
+
+.share-container {
+  position: relative;
 }

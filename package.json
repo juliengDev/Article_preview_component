@@ -8,8 +8,8 @@
     "build": "tsc && vite build",
     "watch:ts": "tsc -w",
     "preview": "vite preview",
-    "build:sass": "sass ./src/scss/main.scss:./public/css/style.css",
-    "sass": "sass --watch ./src/scss/main.scss:./public/css/style.css"
+    "build:sass": "sass ./src/scss/main.scss:./css/style.css",
+    "sass": "sass --watch ./src/scss/main.scss:./css/style.css"
   },
   "devDependencies": {
     "@eslint/js": "^9.7.0",

@@ -16,15 +16,14 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 1em = 16px
 */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 :root {
-  --color-dark-charcoal: #312e2c;
-  --color-dark-raspberry: #7a284e;
-  --color-brandy-red: #854632;
-  --color-wenge-brown: #5f564d;
-  --color-eggshell: #f3e5d7;
-  --color-white-coffee: #e3ddd7;
-  --color-snow: #fff7fb;
-  --color-pure-white: #ffffff;
+  --color-Fiord: #48556a;
+  --color-Lynch: #6e8098;
+  --color-Cadet-Blue: #9daec2;
+  --color-Black-Squeeze: #ecf2f8;
+  --color-Pure-White: #ffffff;
+  --color-Dusty-Gray: #979797;
 }
 
 * {
@@ -77,8 +76,10 @@ FONT SIZE SYSTEM (px)
 
   */
 body {
-  font-family: "Verdana", sans-serif;
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
   background-color: #fafafa;
+  color: #777;
   font-weight: 400;
   line-height: 1.4;
 }
@@ -106,6 +107,7 @@ body {
 
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -121,6 +123,14 @@ body {
   border: 0;
 }
 
+.mg-top {
+  margin-top: 24rem;
+}
+
+.share-container {
+  position: relative;
+}
+
 .attribution {
   margin: 1.6rem 0 6rem;
   font-size: 1.1rem;
@@ -130,6 +140,70 @@ body {
 .attribution__credit {
   font-weight: 800;
   color: var(--color-dark-raspberry) !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.social {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 24.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem auto;
+  color: var(--color-Cadet-Blue);
+  background-color: var(--color-Fiord);
+  padding: 1.8rem 3.6rem;
+  gap: 1.8rem;
+  border-radius: 10px;
+  letter-spacing: 5px;
+  font-size: clamp(0.8rem, 1.5vw, 1.3rem);
+  z-index: 1;
+  opacity: 0; /* caché par défaut */
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.social-visible {
+  opacity: 1;
+  visibility: visible;
+  animation: fadeIn 0.3s ease-in-out;
+}
+.social__txt {
+  text-transform: uppercase;
+}
+.social__icon:hover {
+  cursor: pointer;
+}
+
+.triangle-down {
+  position: absolute;
+  bottom: -12px;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid var(--color-Fiord);
+}
+
+.btn__share {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 50%;
+  border: none;
+  z-index: 2;
 }
 
 /*# sourceMappingURL=style.css.map */
