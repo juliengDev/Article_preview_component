@@ -1,30 +1,9 @@
-.centered-div {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-.centered-div2 {
-  margin: 0 auto;
-  max-width: 50%;
-  text-align: center;
-}
-
-.centered-div3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
-}
-
 .container {
-  width: min(73rem, 100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 26rem auto 3rem;
 }
 
 .hidden {
@@ -36,10 +15,6 @@
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
-}
-
-.mg-top {
-  margin-top: 24rem;
 }
 
 .share-container {

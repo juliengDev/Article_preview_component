@@ -8,6 +8,9 @@
 }
 
 .social {
+  // @include respond(phone) {
+  //   display: none;
+  // }
   position: absolute;
   bottom: 28px;
   left: 50%;

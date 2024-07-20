@@ -19,6 +19,8 @@
 }
 body {
   min-height: 100dvh;
+  width: min(73rem, 80%);
+  margin: 0 auto;
 }
 html {
   box-sizing: border-box;

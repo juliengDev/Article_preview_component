@@ -39,6 +39,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 body {
   min-height: 100dvh;
+  width: min(73rem, 80%);
+  margin: 0 auto;
 }
 
 html {
@@ -78,7 +80,7 @@ FONT SIZE SYSTEM (px)
 body {
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
-  background-color: #fafafa;
+  background-color: var(--color-Black-Squeeze);
   color: #777;
   font-weight: 400;
   line-height: 1.4;
@@ -100,34 +102,12 @@ body {
   color: var(--color-Lynch);
 }
 
-.centered-div {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.centered-div2 {
-  margin: 0 auto;
-  max-width: 50%;
-  text-align: center;
-}
-
-.centered-div3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
-}
-
 .container {
-  width: min(73rem, 100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 26rem auto 3rem;
 }
 
 .hidden {
@@ -139,10 +119,6 @@ body {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
-}
-
-.mg-top {
-  margin-top: 24rem;
 }
 
 .share-container {
@@ -230,22 +206,36 @@ body {
 
 .article {
   display: grid;
-  grid-template-columns: minmax(0, 28.5rem) minmax(0, 44.5rem) 0;
+  grid-template-columns: minmax(0, 28.5rem) minmax(0, 44.5rem);
   max-width: 73rem;
   width: 100%;
   box-shadow: 0px 40px 40px rgba(201, 213, 225, 0.5);
-  border-radius: 10px;
+}
+@media only screen and (max-width: 37.5em) {
+  .article {
+    grid-template-columns: minmax(0, 32.7rem);
+    position: relative;
+  }
 }
 .article__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 10px 0 0 10px;
 }
 .article__content {
+  border-radius: 0 10px 10px 0;
+  background-color: var(--color-Pure-White);
   padding: clamp(2rem, 5vw, 3.2rem) clamp(2rem, 5vw, 2.5rem) clamp(2.5rem, 5vw, 4rem);
+}
+@media only screen and (max-width: 37.5em) {
+  .article__content {
+    padding: clamp(3.6rem, 5vw, 3.2rem) clamp(3.2rem, 5vw, 3.8rem) clamp(3.2rem, 5vw, 4rem);
+  }
 }
 .article__content__container {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 .article__content__heading {
@@ -272,6 +262,22 @@ body {
 }
 .article__content__card__profil__date {
   color: var(--color-Cadet-Blue);
+}
+.article__footer {
+  display: none;
+}
+@media only screen and (max-width: 37.5em) {
+  .article__footer {
+    min-width: 100%;
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+  }
+  .article__footer__social {
+    display: flex;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

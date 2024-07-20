@@ -1,5 +1,4 @@
 import "../css/style.css";
-import "../src/home";
 
 const btnShareEl = document.querySelector<HTMLButtonElement>(".btn__share");
 const socialLinksEl = document.querySelector<HTMLDivElement>(".social");
