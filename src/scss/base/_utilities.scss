@@ -19,4 +19,12 @@
 
 .share-container {
   position: relative;
+  @include respond(tab-port) {
+    // position: absolute;
+    // bottom: 1.6rem;
+    // right: 0;
+    // z-index: 1;
+    // top: 2.6rem;
+    // padding-right: 3.2rem;
+  }
 }

@@ -8,9 +8,9 @@
 }
 
 .social {
-  // @include respond(phone) {
-  //   display: none;
-  // }
+  @include respond(tab-port) {
+    display: none;
+  }
   position: absolute;
   bottom: 28px;
   left: 50%;
@@ -35,6 +35,11 @@
     opacity: 1;
     visibility: visible;
     animation: fadeIn 0.3s ease-in-out;
+    @include respond(tab-port) {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
   }
   &__txt {
     text-transform: uppercase;

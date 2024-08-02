@@ -5,9 +5,9 @@
   width: 100%;
   box-shadow: 0px 40px 40px rgba(201, 213, 225, 0.5);
 
-  @include respond(phone) {
-    grid-template-columns: minmax(0, 32.7rem);
-    position: relative;
+  @include respond(tab-port) {
+    grid-template-columns: 1fr;
+    max-width: 32.7rem;
   }
   &__img {
     width: 100%;
@@ -19,15 +19,16 @@
   &__content {
     border-radius: 0 10px 10px 0;
     background-color: var(--color-Pure-White);
-    padding: clamp(2rem, 5vw, 3.2rem) clamp(2rem, 5vw, 2.5rem)
+    padding: clamp(2rem, 5vw, 3.2rem) clamp(4rem, 5vw, 4.5rem)
       clamp(2.5rem, 5vw, 4rem);
-    @include respond(phone) {
-      padding: clamp(3.6rem, 5vw, 3.2rem) clamp(3.2rem, 5vw, 3.8rem)
-        clamp(3.2rem, 5vw, 4rem);
+    @include respond(tab-port) {
+      position: relative;
+
+      padding: clamp(3.2rem, 5vw, 3.6rem) clamp(3.2rem, 5vw, 3.8rem)
+        clamp(2rem, 5vw, 2.6rem);
     }
     &__container {
       display: flex;
-      align-items: center;
       justify-content: space-between;
     }
 
@@ -60,15 +61,34 @@
   }
   &__footer {
     display: none;
-    @include respond(phone) {
-      min-width: 100%;
+    width: 100%;
+    background-color: var(--color-Fiord);
+    border-radius: 0 0 5px 5px;
+
+    @include respond(tab-port) {
       display: block;
       position: absolute;
       bottom: 0px;
       left: 0px;
+
       &__social {
-        display: flex;
-        align-items: center;
+        &__sharegroup {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 2.2rem 3.2rem;
+          &__txt {
+            flex-shrink: 1;
+            text-transform: uppercase;
+            color: var(--color-Cadet-Blue);
+          }
+          &__icons {
+            flex-shrink: 1;
+            display: flex;
+            align-items: center;
+            gap: 1.6rem;
+          }
+        }
       }
     }
   }
