@@ -87,7 +87,7 @@ body {
 }
 
 .ft-heading {
-  font-size: clamp(1.6rem, 1.5vw, 2.1rem);
+  font-size: clamp(2rem, 1.5vw, 2.5rem);
   line-height: 28px;
   letter-spacing: 0.25px;
   font-weight: 700;
@@ -95,7 +95,7 @@ body {
 }
 
 .ft-intro {
-  font-size: clamp(0.8rem, 1.5vw, 1.3rem);
+  font-size: clamp(1.3rem, 1.5vw, 1.8rem);
   line-height: 20px;
   letter-spacing: 0.12px;
   font-weight: 500;
@@ -165,7 +165,7 @@ body {
   visibility: hidden;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 37.5em) {
   .social {
     display: none;
   }
@@ -175,7 +175,7 @@ body {
   visibility: visible;
   animation: fadeIn 0.3s ease-in-out;
 }
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 37.5em) {
   .social-visible {
     position: absolute;
     bottom: 0;
@@ -215,29 +215,34 @@ body {
 }
 .article {
   display: grid;
-  grid-template-columns: minmax(0, 28.5rem) minmax(0, 44.5rem);
+  grid-template-columns: minmax(28.5rem, 1fr) minmax(44.5rem, 2fr);
   max-width: 73rem;
   width: 100%;
   box-shadow: 0px 40px 40px rgba(201, 213, 225, 0.5);
 }
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 37.5em) {
   .article {
     grid-template-columns: 1fr;
     max-width: 32.7rem;
   }
 }
 .article__img {
-  width: 100%;
+  width: 110%;
   height: 100%;
   object-fit: cover;
   border-radius: 10px 0 0 10px;
+}
+@media only screen and (max-width: 37.5em) {
+  .article__img {
+    width: 100%;
+  }
 }
 .article__content {
   border-radius: 0 10px 10px 0;
   background-color: var(--color-Pure-White);
   padding: clamp(2rem, 5vw, 3.2rem) clamp(4rem, 5vw, 4.5rem) clamp(2.5rem, 5vw, 4rem);
 }
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 37.5em) {
   .article__content {
     position: relative;
     padding: clamp(3.2rem, 5vw, 3.6rem) clamp(3.2rem, 5vw, 3.8rem) clamp(2rem, 5vw, 2.6rem);
@@ -267,9 +272,11 @@ body {
   letter-spacing: 0.12px;
 }
 .article__content__card__profil__name {
+  font-size: clamp(1.3rem, 1.5vw, 1.9rem);
   color: var(--color-Fiord);
 }
 .article__content__card__profil__date {
+  font-size: clamp(1.3rem, 1.5vw, 1.9rem);
   color: var(--color-Cadet-Blue);
 }
 .article__footer {
@@ -278,7 +285,7 @@ body {
   background-color: var(--color-Fiord);
   border-radius: 0 0 5px 5px;
 }
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 37.5em) {
   .article__footer {
     display: block;
     position: absolute;

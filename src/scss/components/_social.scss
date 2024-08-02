@@ -8,7 +8,7 @@
 }
 
 .social {
-  @include respond(tab-port) {
+  @include respond(phone) {
     display: none;
   }
   position: absolute;
@@ -35,7 +35,7 @@
     opacity: 1;
     visibility: visible;
     animation: fadeIn 0.3s ease-in-out;
-    @include respond(tab-port) {
+    @include respond(phone) {
       position: absolute;
       bottom: 0;
       left: 0;

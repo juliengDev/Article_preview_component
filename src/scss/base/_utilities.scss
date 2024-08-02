@@ -19,7 +19,7 @@
 
 .share-container {
   position: relative;
-  @include respond(tab-port) {
+  @include respond(phone) {
     // position: absolute;
     // bottom: 1.6rem;
     // right: 0;
