@@ -231,7 +231,7 @@ body {
   width: 110%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px 0 0 10px;
+  border-radius: 10px 10px 0 0;
 }
 @media only screen and (max-width: 37.5em) {
   .article__img {
