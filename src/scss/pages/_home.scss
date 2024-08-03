@@ -1,4 +1,6 @@
 .article {
+  position: relative;
+  border-radius: 10px;
   display: grid;
   grid-template-columns: minmax(28.5rem, 1fr) minmax(44.5rem, 2fr);
   max-width: 73rem;
@@ -24,15 +26,13 @@
   &__content {
     border-radius: 0 10px 10px 0;
     background-color: var(--color-Pure-White);
-    padding: clamp(2rem, 5vw, 3.2rem) clamp(4rem, 5vw, 4.5rem)
-      clamp(2.5rem, 5vw, 4rem);
+    padding: 3.2rem 4rem;
     @include respond(phone) {
-      position: relative;
-
-      padding: clamp(3.2rem, 5vw, 3.6rem) clamp(3.2rem, 5vw, 3.8rem)
-        clamp(2rem, 5vw, 2.6rem);
+      padding: 3.2rem 3.2rem 2rem;
+      border-radius: 0 0 10px 10px;
     }
     &__container {
+      position: relative;
       display: flex;
       justify-content: space-between;
     }
@@ -42,7 +42,10 @@
       margin-bottom: 1.2rem;
     }
     &__txt {
-      margin-bottom: 4rem;
+      margin-bottom: 2rem;
+      @include respond(phone) {
+        margin-bottom: 4rem;
+      }
     }
     &__card {
       display: flex;
@@ -62,39 +65,6 @@
         &__date {
           font-size: 1.3rem;
           color: var(--color-Cadet-Blue);
-        }
-      }
-    }
-  }
-  &__footer {
-    display: none;
-    width: 100%;
-    background-color: var(--color-Fiord);
-    border-radius: 0 0 5px 5px;
-
-    @include respond(phone) {
-      display: block;
-      position: absolute;
-      bottom: 0px;
-      left: 0px;
-
-      &__social {
-        &__sharegroup {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding: 2.2rem 3.2rem;
-          &__txt {
-            flex-shrink: 1;
-            text-transform: uppercase;
-            color: var(--color-Cadet-Blue);
-          }
-          &__icons {
-            flex-shrink: 1;
-            display: flex;
-            align-items: center;
-            gap: 1.6rem;
-          }
         }
       }
     }
