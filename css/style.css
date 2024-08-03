@@ -87,7 +87,7 @@ body {
 }
 
 .ft-heading {
-  font-size: clamp(2rem, 1.5vw, 2.5rem);
+  font-size: 2rem;
   line-height: 28px;
   letter-spacing: 0.25px;
   font-weight: 700;
@@ -95,7 +95,7 @@ body {
 }
 
 .ft-intro {
-  font-size: clamp(1.3rem, 1.5vw, 1.8rem);
+  font-size: 1.3rem;
   line-height: 20px;
   letter-spacing: 0.12px;
   font-weight: 500;
@@ -228,13 +228,14 @@ body {
   }
 }
 .article__img {
-  width: 110%;
+  width: 117%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 10px 10px 0 0;
+  object-fit: fill;
+  border-radius: 10px 0 0 10px;
 }
 @media only screen and (max-width: 37.5em) {
   .article__img {
+    border-radius: 10px 10px 0 0;
     width: 100%;
   }
 }
@@ -258,7 +259,7 @@ body {
   margin-bottom: 1.2rem;
 }
 .article__content__txt {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 .article__content__card {
   display: flex;
@@ -273,11 +274,11 @@ body {
   letter-spacing: 0.12px;
 }
 .article__content__card__profil__name {
-  font-size: clamp(1.3rem, 1.5vw, 1.9rem);
+  font-size: 1.3rem;
   color: var(--color-Fiord);
 }
 .article__content__card__profil__date {
-  font-size: clamp(1.3rem, 1.5vw, 1.9rem);
+  font-size: 1.3rem;
   color: var(--color-Cadet-Blue);
 }
 .article__footer {

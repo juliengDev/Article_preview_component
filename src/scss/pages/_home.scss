@@ -10,11 +10,13 @@
     max-width: 32.7rem;
   }
   &__img {
-    width: 110%;
+    width: 117%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 10px 10px 0 0;
+    object-fit: fill;
+    border-radius: 10px 0 0 10px;
+
     @include respond(phone) {
+      border-radius: 10px 10px 0 0;
       width: 100%;
     }
   }
@@ -40,7 +42,7 @@
       margin-bottom: 1.2rem;
     }
     &__txt {
-      margin-bottom: 2rem;
+      margin-bottom: 4rem;
     }
     &__card {
       display: flex;
@@ -54,11 +56,11 @@
         line-height: 20px;
         letter-spacing: 0.12px;
         &__name {
-          font-size: clamp(1.3rem, 1.5vw, 1.9rem);
+          font-size: 1.3rem;
           color: var(--color-Fiord);
         }
         &__date {
-          font-size: clamp(1.3rem, 1.5vw, 1.9rem);
+          font-size: 1.3rem;
           color: var(--color-Cadet-Blue);
         }
       }
