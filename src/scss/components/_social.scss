@@ -8,38 +8,41 @@
 }
 
 .social {
-  @include respond(phone) {
-    display: none;
-  }
   position: absolute;
-  bottom: 28px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 60px;
+  right: 18px;
+  transform: translateX(50%);
   max-width: 24.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 3rem auto;
   color: var(--color-Cadet-Blue);
   background-color: var(--color-Fiord);
   padding: 1.8rem 3.6rem;
   gap: 1.8rem;
   border-radius: 10px;
   letter-spacing: 5px;
-  font-size: clamp(0.8rem, 1.5vw, 1.3rem);
+  font-size: 1.3rem;
   z-index: 1;
   opacity: 0; /* hidden by default */
   visibility: hidden;
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  visibility: 0.3s ease-in-out;
+  @include respond(phone) {
+    min-width: 32.7rem;
+    width: 100%;
+    bottom: -20px;
+    left: 50%;
+    transform: translate(-50%);
+    height: 34px;
+    border-radius: 0 0 10px 10px;
+    padding: 4rem 9rem 4rem 0;
+  }
+
   &-visible {
     opacity: 1;
     visibility: visible;
     animation: fadeIn 0.3s ease-in-out;
-    @include respond(phone) {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-    }
   }
   &__txt {
     text-transform: uppercase;
@@ -59,4 +62,7 @@
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
   border-top: 12px solid var(--color-Fiord);
+  @include respond(phone) {
+    display: none;
+  }
 }
