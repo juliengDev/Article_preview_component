@@ -1,5 +1,6 @@
 .btn {
   &__share {
+    position: relative;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -9,11 +10,12 @@
     border: none;
     z-index: 2;
     transition: all 0.3s ease-in-out;
-    @include respond(phone) {
+    @include respond(tab-port) {
+      position: static;
     }
     &-active {
       background-color: var(--color-Fiord);
-      @include respond(phone) {
+      @include respond(tab-port) {
         background-color: var(--color-Lynch);
       }
     }

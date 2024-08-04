@@ -9,11 +9,10 @@
 
 .social {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 90px;
+  right: -67px;
   width: 100%;
-  //transform: translateX(50%);
-  //max-width: 24.8rem;
+  max-width: 24.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,15 +28,14 @@
   visibility: hidden;
   transition: opacity 0.3s ease-in-out;
   visibility: 0.3s ease-in-out;
-  @include respond(phone) {
-    //min-width: 32.7rem;
-    // width: 100%;
-    //bottom: -20px;
-    //left: 50%;
-    //transform: translate(-50%);
-    height: 34px;
+  @include respond(tab-port) {
+    max-width: 100%;
+    bottom: 0;
+    right: 0;
+    justify-content: flex-start;
+    padding: 3rem 0;
     border-radius: 0 0 10px 10px;
-    padding: 4rem 9rem 4rem 0;
+    gap: 2.4rem;
   }
 
   &-visible {
@@ -47,8 +45,16 @@
   }
   &__txt {
     text-transform: uppercase;
+    padding-left: min(2.6rem, 80%);
+    flex: 0 1 6.2rem;
   }
   &__icon {
+    @include respond(tab-port) {
+      top: 50%;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 10px;
+    }
     &:hover {
       cursor: pointer;
     }
@@ -63,7 +69,7 @@
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
   border-top: 12px solid var(--color-Fiord);
-  @include respond(phone) {
+  @include respond(tab-port) {
     display: none;
   }
 }
